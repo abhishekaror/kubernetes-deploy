@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-primary
+  namespace: default
+spec:
+  selector:
+    app: primary
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
