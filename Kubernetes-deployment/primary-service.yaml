@@ -7,6 +7,12 @@ spec:
   selector:
     app: primary
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 80
+    - name: custom-port
+      protocol: TCP
+      port: 30899
+      targetPort: 80
+  type: LoadBalancer

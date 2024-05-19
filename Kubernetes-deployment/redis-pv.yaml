@@ -4,10 +4,11 @@ metadata:
   name: redis-pv
 spec:
   capacity:
-    storage: 1Gi
-  volumeMode: Filesystem
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  storageClassName: manual
-  hostPath:
-    path: /mnt/data
+  gcePersistentDisk:
+    pdName: redis-disk
+    fsType: ext4
+
+
